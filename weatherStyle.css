@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: #bee2fc;
+}
+
+h1 {
+    color: whitesmoke;
+    padding: 18px 0;
+    text-align: center;
+    font-size: 1.75rem;
+    background: rgba(13, 79, 212, 0.949);
+}
+
+.container {
+    display: flex;
+    gap: 35px;
+    padding: 30px;
+}
+
+/* Weather Input/Data */
+
+
+.weather-input {
+    width: 550px;
+}
+
+.weather-input .separator {
+    height: 1px;
+    width: 100%;
+    background: #bbb;
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-input .separator::before {
+    content: "or";
+    color: rgb(109, 108, 108);
+    font-size: 1.18rem;
+    padding: 0 15px;
+    background: #bee2fc;
+    margin-top: -4px;
+
+}
+
+
+.weather-input input {
+    width: 100%;
+    height: 46px;
+    padding: 0 15px;
+    font-size: 1.07rem;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+
+
+}
+.weather-input button {
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: whitesmoke;
+    font-size: 1rem;
+    border-radius: 4px;
+    background: rgba(13, 79, 212, 0.949);
+}
+
+.weather-input .locationBtn {
+    background: rgb(109, 108, 108);
+}
+.weather-data {
+    width: 100%;
+}
+.weather-data h4 {
+    margin-top: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Current Weather */
+
+.current-weather {
+    color: whitesmoke;
+    border-radius: 5px;
+    display: flex;
+    padding: 20px 70px 20px 20px;
+    background: rgba(13, 79, 212, 0.949);
+    justify-content: space-between;
+}
+
+.current-weather h2{
+    font-size: 1.7rem;
+}
+
+.current-weather .icon {
+    text-align: center;
+}
+
+.current-weather .icon img {
+    max-width: 120px;
+    margin-top: -15px;
+}
+
+.current-weather .icon h6 {
+    margin-top: -10px;
+    text-transform: capitalize;
+}
+
+.days-forecast h2 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+
+/* Weather Cards*/
+
+.weather-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.weather-cards .card {
+    background: rgba(241, 222, 193, 0.644);
+    list-style: none;
+    color: darkblue;
+    padding: 18px 16px;
+    border-radius: 10px;
+    width: calc(100% / 5);
+
+    border: 2px solid rgba(13, 79, 212, 0.949);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.weather-cards .card img {
+    max-width: 70px;
+    margin: 5px 0 -5px 0;
+    
+}
+
+
+/* Media Queries */ 
+
+@media (max-width: 1400px) {
+    .weather-data .current-weather {
+        padding: 20px;
+    }
+
+    .weather-cards {
+        flex-wrap: wrap;
+    }
+
+    .weather-cards .card {
+        width: calc( 100% / 4 - 15px);
+    }
+}
+
+@media (max-width: 950px) {
+    .weather-input {
+        width: 450px;
+    }
+
+    .weather-cards .card {
+        width: calc(100% / 2 - 10px);
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+
+    .weather-input {
+        width: 100%;
+    }
+}
+
+
+
+

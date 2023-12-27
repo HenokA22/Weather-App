@@ -29,6 +29,7 @@ function changeDateFormat(inputDate) {
 }
 
 const getCityCoord = function() {
+    // Here I am getting the value contained inside the input box
     const cityName = cityInput.value.trim();
     
     if(!cityName) {
